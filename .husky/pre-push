@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "** Running tests before push...**"
+
+if npm run test; then
+  echo "**✅ Tests passed! Pushing to remote repository. ✅**"
+else
+  echo "**❌ Tests failed! Fix failing tests before pushing. ❌**"
+  exit 1
+fi
+
+echo "**➡️ Pushing to remote repository...**"

@@ -1,0 +1,9 @@
+export const USER_READ_REPOSITORY = 'USER_READ_REPOSITORY';
+export const USER_WRITE_REPOSITORY = 'USER_WRITE_REPOSITORY';
+export const USER_SERVICE = 'USER_SERVICE';
+
+export const DATING_HISTORY_WRITE_REPOSITORY = 'DATING_HISTORY_WRITE_REPOSITORY';
+export enum DatingHistoryType {
+  LIKE = 'like',
+  PASS = 'pass',
+}

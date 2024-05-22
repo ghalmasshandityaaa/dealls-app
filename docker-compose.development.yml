@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  app-dev:
+    container_name: app-dev
+    build: .
+    env_file:
+      - .env.development
+    ports:
+      - '3000:3000'
+    deploy:
+      restart_policy:
+        condition: always
