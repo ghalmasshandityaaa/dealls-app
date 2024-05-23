@@ -55,6 +55,8 @@ Explore the suite of APIs offered by our dating app, each designed to provide a 
   - **Get Random User:** `GET 'api/users/random'`  
     Discover a random user profile to keep the dating experience fresh and exciting. Note: Each user profile will only be shown once per day.
 
+The API is deployed at: [https://dating-app.ghalmasshanditya.eu.org/](https://dating-app.ghalmasshanditya.eu.org/)
+
 ## Installing Dependencies
 
 To install the required dependencies for this project, use the following command:
