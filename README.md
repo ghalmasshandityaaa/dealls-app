@@ -1,4 +1,8 @@
-# Backend API
+# Backend Dating App API
+
+## Flow Application
+
+![plot](./assets/flow.png)
 
 ## Stack
 
@@ -28,8 +32,28 @@ To facilitate development, the following tools are used:
 - **Linter:** [ESLint](https://eslint.org) - A pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript.
 - **Formatting:** [Prettier](https://prettier.io/) - An opinionated code formatter that enforces a consistent style by parsing your code and re-printing it.
 - **Type-Checking:** [TSC](https://www.typescriptlang.org/docs/handbook/compiler-options.html) - TypeScript Compiler, used to ensure type safety and catch errors early in the development process.
-- **Package Manager:** [yarn](...) - ...
+- **Package Manager:** [yarn](https://yarnpkg.com/) - A fast, reliable, and secure dependency management tool that provides deterministic dependency resolution, efficient caching, and parallel installation to streamline the development workflow.
 - **Standardization:** [Conventional + Husky](https://github.com/conventional-changelog/commitlint) - A tool to enforce conventional commit messages and Git hooks.
+
+## Available API Endpoints
+
+Explore the suite of APIs offered by our dating app, each designed to provide a seamless and engaging user experience. Here's a rundown of the available endpoints:
+
+- **User Authentication:**
+  - **Sign Up:** `POST 'api/auth/signup'`  
+    Register a new user account with essential details to start using the app.
+  - **Login:** `POST 'api/auth/login'`  
+    Authenticate existing users, allowing them to access their account and start matching.
+- **Packages:**
+  - **Purchase Package:** `POST 'api/packages/purchase'`  
+    Buy premium packages that provide benefits like unlimited swipes or a verified user label.
+- **User Interactions:**
+  - **Like User:** `POST 'api/users/:id/like'`  
+    Express interest in another user by liking their profile.
+  - **Pass User:** `POST 'api/users/:id/pass'`  
+    Skip a user’s profile if you're not interested in connecting with them.
+  - **Get Random User:** `GET 'api/users/random'`  
+    Discover a random user profile to keep the dating experience fresh and exciting. Note: Each user profile will only be shown once per day.
 
 ## Installing Dependencies
 
@@ -88,7 +112,6 @@ $ yarn migration:create seed-<seed-name>
 ```
 
 And move seed inside the corresponding service's seed folder: `src/database/seeds/index.ts`
-
 Add your migration to the `index.ts` (eg. `seeds/index.ts`)
 
 Rule:
